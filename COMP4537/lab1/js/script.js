@@ -53,6 +53,7 @@ class Note {
     removeNote() {
         // remove from local storage
         noteArray = noteArray.filter(note => note.order !== this.order);
+        console.log("new version removal")
         localStorage.setItem('notes', JSON.stringify(noteArray));
         this.noteDiv.remove();
     }   
