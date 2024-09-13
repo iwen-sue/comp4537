@@ -50,7 +50,6 @@ class Note {
         this.noteDiv.appendChild(this.buttonDiv);
     }
 
-    // Remove the note from the DOM
     removeNote() {
         // remove from local storage
         noteArray = noteArray.filter(note => note.order !== this.order);
