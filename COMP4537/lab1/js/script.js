@@ -3,7 +3,7 @@ const time = localStorage.getItem('time');
 document.getElementById('time').innerHTML = time? time : '- - : - - : - -';
 
 const fetchArray = localStorage.getItem('notes');
-const noteArray = fetchArray? JSON.parse(fetchArray) : [];
+let noteArray = fetchArray? JSON.parse(fetchArray) : [];
 
 class Note {
     static order = 0;
@@ -53,7 +53,7 @@ class Note {
     // Remove the note from the DOM
     removeNote() {
         // remove from local storage
-        noteArray.splice(this.order, 1);
+        noteArray = noteArray.filter(note => note.order !== this.order);
         localStorage.setItem('notes', JSON.stringify(noteArray));
         this.noteDiv.remove();
     }   
