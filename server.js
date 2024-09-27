@@ -8,4 +8,4 @@ http.createServer((req, res) => {
     //     res.writeHead(200, {'Content-Type': 'text/html'});
     //     return res.end('test');
     // }
-}).listen(process.env.PORT || 8080);
+}).listen(80);
