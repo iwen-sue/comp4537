@@ -39,9 +39,10 @@ a {
 @media print {
   html {
     font-size: 12px; }
-  
+
   body .container {
-    max-width: 80%; }
+    max-width: 90%;
+  }
 
   .print {
     display: none; } }
