@@ -39,6 +39,9 @@ a {
 @media print {
   html {
     font-size: 12px; }
+  
+  body .container {
+    max-width: 80%; }
 
   .print {
     display: none; } }
